@@ -1,6 +1,6 @@
 $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project'
-require 'motion-testflight'
+# require 'motion-testflight'
 require 'YAML'
 
 local_config = YAML::load(File.open('local_config.yml'))
@@ -16,8 +16,9 @@ Motion::Project::App.setup do |app|
   
   app.vendor_project('vendor/CocoaOSC', :xcode)
   app.frameworks << 'CFNetwork'
+  app.frameworks << 'CoreImage'
   
-  app.testflight.sdk = 'vendor/TestFlightSDK'
-  app.testflight.api_token = local_config['testflight_api_token']
-  app.testflight.team_token = local_config['testflight_team_token']
+  # app.testflight.sdk = 'vendor/TestFlightSDK'
+  # app.testflight.api_token = local_config['testflight_api_token']
+  # app.testflight.team_token = local_config['testflight_team_token']
 end
