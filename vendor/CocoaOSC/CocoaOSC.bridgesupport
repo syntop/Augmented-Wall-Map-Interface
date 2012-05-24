@@ -1,0 +1,327 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='OSCConnectionTCP_Int32Header' value='1'/>
+<enum name='OSCConnectionTCP_RFC1055' value='2'/>
+<enum name='OSCConnectionUDP' value='0'/>
+<class name='NSArray'>
+<method selector='car'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='cdr'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='NSDate'>
+<method class_method='true' selector='dateWithNTPTimestamp:'>
+<arg index='0' declared_type='uint64_t' name='timestamp' type='Q'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method class_method='true' selector='ntpReferenceDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='ntpTimestamp'>
+<retval declared_type='uint64_t' type='Q'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='oscConnection:didReceivePacket:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:didReceivePacket:fromHost:port:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<arg index='2' declared_type='NSString*' name='host' type='@'/>
+<arg index='3' declared_type='UInt16' name='port' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:didSendPacket:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:failedToReceivePacketWithError:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='NSError*' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:willSendPacket:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnectionDidConnect:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnectionDidDisconnect:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnectionWillConnect:'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSString'>
+<method selector='oscStringData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+</class>
+<class name='OSCBool'>
+<method class_method='true' selector='no'>
+<retval declared_type='OSCBool*' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='yes'>
+<retval declared_type='OSCBool*' type='@'/>
+</method>
+</class>
+<class name='OSCConnection'>
+<method selector='acceptOnInterface:port:protocol:error:'>
+<arg index='0' declared_type='NSString*' name='interface' type='@'/>
+<arg index='1' declared_type='UInt16' name='port' type='S'/>
+<arg index='2' declared_type='OSCConnectionProtocol' name='proto' type='i'/>
+<arg index='3' declared_type='NSError**' name='errPtr' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bindToAddress:port:error:'>
+<arg index='0' declared_type='NSString*' name='localAddr' type='@'/>
+<arg index='1' declared_type='UInt16' name='port' type='S'/>
+<arg index='2' declared_type='NSError**' name='errPtr' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='connectToHost:port:protocol:error:'>
+<arg index='0' declared_type='NSString*' name='host' type='@'/>
+<arg index='1' declared_type='UInt16' name='port' type='S'/>
+<arg index='2' declared_type='OSCConnectionProtocol' name='protocol' type='i'/>
+<arg index='3' declared_type='NSError**' name='errPtr' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='connectedHost'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='connectedPort'>
+<retval declared_type='UInt16' type='S'/>
+</method>
+<method selector='continuouslyReceivePackets'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dispatcher'>
+<retval declared_type='OSCDispatcher*' type='@'/>
+</method>
+<method selector='isConnected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localHost'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='localPort'>
+<retval declared_type='UInt16' type='S'/>
+</method>
+<method selector='protocol'>
+<retval declared_type='OSCConnectionProtocol' type='i'/>
+</method>
+<method selector='receivePacket'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendPacket:'>
+<arg index='0' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendPacket:toHost:port:'>
+<arg index='0' declared_type='OSCPacket*' name='packet' type='@'/>
+<arg index='1' declared_type='NSString*' name='host' type='@'/>
+<arg index='2' declared_type='UInt16' name='port' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContinuouslyReceivePackets:'>
+<arg index='0' declared_type='BOOL' name='continuouslyReceivePackets' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg index='0' declared_type='id' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCDispatcher'>
+<method selector='addMethodAddress:target:action:'>
+<arg index='0' declared_type='NSString*' name='address' type='@'/>
+<arg index='1' declared_type='id' name='target' type='@'/>
+<arg index='2' declared_type='SEL' name='action' type=':'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelQueuedBundles'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='dispatchPacket:'>
+<arg index='0' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllTargetMethods:action:'>
+<arg index='0' declared_type='id' name='targetOrNil' type='@'/>
+<arg index='1' declared_type='SEL' name='actionOrNULL' type=':'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeMethodsAtAddressPattern:'>
+<arg index='0' declared_type='NSString*' name='addressPattern' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='splitAddressComponents:'>
+<arg index='0' declared_type='NSString*' name='address' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='splitPatternComponentsToRegex:'>
+<arg index='0' declared_type='NSString*' name='pattern' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='OSCImpulse'>
+<method class_method='true' selector='impulse'>
+<retval declared_type='OSCImpulse*' type='@'/>
+</method>
+</class>
+<class name='OSCMutableBundle'>
+<method selector='addChildPacket:'>
+<arg index='0' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setTimetag:'>
+<arg index='0' declared_type='NSDate*' name='timetag' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='timetag'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+</class>
+<class name='OSCMutableMessage'>
+<method selector='addArgument:'>
+<arg index='0' declared_type='id' name='arg' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addBlob:'>
+<arg index='0' declared_type='NSData*' name='blob' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addBool:'>
+<arg index='0' declared_type='BOOL' name='aBool' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addFloat:'>
+<arg index='0' declared_type='float' name='aFloat' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addImpulse'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addInt:'>
+<arg index='0' declared_type='int' name='anInt' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addNull'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addString:'>
+<arg index='0' declared_type='NSString*' name='str' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addTimeTag:'>
+<arg index='0' declared_type='NSDate*' name='time' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='address'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setAddress:'>
+<arg index='0' declared_type='NSString*' name='address' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='typeTag'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='OSCPacket'>
+<method selector='address'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='arguments'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='childPackets'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='dataForContentObject:'>
+<arg index='0' declared_type='id' name='obj' type='@'/>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='encode'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='initWithData:'>
+<arg index='0' declared_type='NSData*' name='data' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isBundle'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='timetag'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+</class>
+<informal_protocol name='OSCConnectionDelegate'>
+<method selector='oscConnection:didReceivePacket:' type='v16@0:4@8@12'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:didReceivePacket:fromHost:port:' type='v24@0:4@8@12@16S20'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<arg index='2' declared_type='NSString*' name='host' type='@'/>
+<arg index='3' declared_type='UInt16' name='port' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:didSendPacket:' type='v16@0:4@8@12'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:failedToReceivePacketWithError:' type='v16@0:4@8@12'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='NSError*' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnection:willSendPacket:' type='v16@0:4@8@12'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<arg index='1' declared_type='OSCPacket*' name='packet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnectionDidConnect:' type='v12@0:4@8'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnectionDidDisconnect:' type='v12@0:4@8'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='oscConnectionWillConnect:' type='v12@0:4@8'>
+<arg index='0' declared_type='OSCConnection*' name='connection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

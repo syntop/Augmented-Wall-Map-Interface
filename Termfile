@@ -1,0 +1,11 @@
+# ProtoMap
+
+PROJECT_NAME = "ProtoMap"
+
+run "cd ~/Apps/#{PROJECT_NAME}"
+run "foreman start -f Procfile"
+  
+pane do
+  run "cd ~/Apps/#{PROJECT_NAME}"
+  run "ls"
+end

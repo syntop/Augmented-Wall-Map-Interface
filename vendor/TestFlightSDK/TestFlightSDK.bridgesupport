@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<string_constant value='1.0' name='TESTFLIGHT_SDK_VERSION' nsstring='true'/>
+<function variadic='true' name='TFLog'>
+<arg type='@' name='format' declared_type='NSString*'/>
+<retval type='v' declared_type='void'/>
+</function>
+<class name='TestFlight'>
+<method class_method='true' selector='addCustomEnvironmentInformation:forKey:'>
+<arg type='@' name='information' declared_type='NSString*' index='0'/>
+<arg type='@' name='key' declared_type='NSString*' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='openFeedbackView'>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='passCheckpoint:'>
+<arg type='@' name='checkpointName' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='setDeviceIdentifier:'>
+<arg type='@' name='deviceIdentifer' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='setOptions:'>
+<arg type='@' name='options' declared_type='NSDictionary*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='submitFeedback:'>
+<arg type='@' name='feedback' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='takeOff:'>
+<arg type='@' name='teamToken' declared_type='NSString*' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+</signatures>
