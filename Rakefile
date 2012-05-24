@@ -10,7 +10,7 @@ Motion::Project::App.setup do |app|
   app.name = 'ProtoMap'
   app.identifier = 'io.syntop.ProtoMap'
   app.device_family = :ipad
-  app.interface_orientations = [:landscape_left, :landscape_right]
+  app.interface_orientations = [:landscape_left, :landscape_right, :portrait, :portrait_upside_down]
   app.icons = ['icon-144.png']
   app.prerendered_icon = true
   

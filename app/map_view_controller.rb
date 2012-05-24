@@ -15,15 +15,33 @@ class MapViewController < UIViewController
     scroll_view.addSubview(map_image_view)
     
     self.view = scroll_view
+    
+    @osc = OSCConnection.alloc.init
+    @osc.delegate = self
+    @oscErrorPtr = Pointer.new(:object)
+    @osc.connectToHost('10.0.1.7', port:12000, protocol:0, error:@oscErrorPtr)
   end
   
   def map_image_view
     @map_image_view ||= begin
       image_view = UIImageView.alloc.init
-      image_view.image = UIImage.imageNamed("map.jpg")
+      image_view.image = UIImage.imageNamed("map-small.jpg")
       image_view.frame = CGRectMake(0, 0, image_view.image.size.width, image_view.image.size.height)
       image_view.userInteractionEnabled = true
       image_view
     end
+  end
+  
+  def scrollViewDidScroll(scrollView)
+    normalizedCenter = CGPoint.new
+    normalizedCenter.x = (scrollView.contentOffset.x + scrollView.frame.size.width/2) / scrollView.contentSize.width
+    normalizedCenter.y = (scrollView.contentOffset.y + scrollView.frame.size.width/2) / scrollView.contentSize.height
+    NSLog("#{normalizedCenter.x} #{normalizedCenter.y}")
+    message = OSCMutableMessage.alloc.init
+    message.address = '/position'
+    message.addFloat(normalizedCenter.x)
+    message.addFloat(normalizedCenter.y)
+    @osc.sendPacket(message)
+    true
   end
 end
