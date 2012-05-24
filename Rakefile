@@ -14,7 +14,13 @@ Motion::Project::App.setup do |app|
   app.icons = ['icon-144.png']
   app.prerendered_icon = true
   
-  app.vendor_project('vendor/CocoaOSC', :xcode)
+  app.vendor_project('vendor/vvosc-frameworks/VVBasics', :static, 
+    :products => ['iphonesimulator.sdk/usr/local/lib/libVVBasics.a', 'iphoneos.sdk/usr/local/lib/libVVBasics.a']
+  )
+  app.vendor_project('vendor/vvosc-frameworks/VVOSC', :static, 
+    :products => ['iphonesimulator.sdk/usr/local/lib/libVVOSC.a', 'iphoneos.sdk/usr/local/lib/libVVOSC.a']
+  )
+  
   app.frameworks << 'CFNetwork'
   app.frameworks << 'CoreImage'
   

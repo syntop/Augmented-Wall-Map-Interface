@@ -16,10 +16,9 @@ class MapViewController < UIViewController
     
     self.view = scroll_view
     
-    @osc = OSCConnection.alloc.init
-    @osc.delegate = self
-    @oscErrorPtr = Pointer.new(:object)
-    @osc.connectToHost('10.0.1.7', port:12000, protocol:0, error:@oscErrorPtr)
+    manager = OSCManager.alloc.init
+    manager.setDelegate(self)
+    @osc = manager.createNewOutputToAddress('10.0.1.7', atPort:12000)
   end
   
   def map_image_view
@@ -33,15 +32,10 @@ class MapViewController < UIViewController
   end
   
   def scrollViewDidScroll(scrollView)
-    normalizedCenter = CGPoint.new
-    normalizedCenter.x = (scrollView.contentOffset.x + scrollView.frame.size.width/2) / scrollView.contentSize.width
-    normalizedCenter.y = (scrollView.contentOffset.y + scrollView.frame.size.width/2) / scrollView.contentSize.height
-    NSLog("#{normalizedCenter.x} #{normalizedCenter.y}")
-    message = OSCMutableMessage.alloc.init
-    message.address = '/position'
-    message.addFloat(normalizedCenter.x)
-    message.addFloat(normalizedCenter.y)
-    @osc.sendPacket(message)
+    msg = OSCMessage.createWithAddress('/position')
+    msg.addFloat((scrollView.contentOffset.x + scrollView.frame.size.width/2) / scrollView.contentSize.width)
+    msg.addFloat((scrollView.contentOffset.y + scrollView.frame.size.width/2) / scrollView.contentSize.height)
+    @osc.sendThisMessage(msg)
     true
   end
 end

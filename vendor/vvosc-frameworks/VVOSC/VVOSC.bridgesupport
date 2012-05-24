@@ -1,0 +1,1266 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<string_constant name='AddressSpaceUpdateMenus' value='AddressSpaceUpdateMenus' nsstring='true'/>
+<string_constant name='OSCInPortsChangedNotification' value='OSCInPortsChangedNotification' nsstring='true'/>
+<string_constant name='OSCOutPortsChangedNotification' value='OSCOutPortsChangedNotification' nsstring='true'/>
+<string_constant name='kOSCQueryTypeCurrentValueString' value='#current-value' nsstring='true'/>
+<string_constant name='kOSCQueryTypeDocumentationString' value='#documentation' nsstring='true'/>
+<string_constant name='kOSCQueryTypeErrorString' value='#error' nsstring='true'/>
+<string_constant name='kOSCQueryTypeReplyString' value='#reply' nsstring='true'/>
+<string_constant name='kOSCQueryTypeReturnTypeStringString' value='#return-type-string' nsstring='true'/>
+<string_constant name='kOSCQueryTypeTypeSignatureString' value='#type-signature' nsstring='true'/>
+<enum name='IPHONE' value='1'/>
+<enum name='OSCMIDIActiveSenseVal' value='254'/>
+<enum name='OSCMIDIAfterTouchVal' value='160'/>
+<enum name='OSCMIDIBeginSysexDumpVal' value='240'/>
+<enum name='OSCMIDIChannelPressureVal' value='208'/>
+<enum name='OSCMIDIClockVal' value='248'/>
+<enum name='OSCMIDIContinueVal' value='251'/>
+<enum name='OSCMIDIControlChangeVal' value='176'/>
+<enum name='OSCMIDIEndSysexDumpVal' value='247'/>
+<enum name='OSCMIDIMTCQuarterFrameVal' value='241'/>
+<enum name='OSCMIDINoteOffVal' value='128'/>
+<enum name='OSCMIDINoteOnVal' value='144'/>
+<enum name='OSCMIDIPitchWheelVal' value='224'/>
+<enum name='OSCMIDIProgramChangeVal' value='192'/>
+<enum name='OSCMIDIResetVal' value='255'/>
+<enum name='OSCMIDISongPosPointerVal' value='242'/>
+<enum name='OSCMIDISongSelectVal' value='243'/>
+<enum name='OSCMIDIStartVal' value='250'/>
+<enum name='OSCMIDIStopVal' value='252'/>
+<enum name='OSCMIDITickVal' value='249'/>
+<enum name='OSCMIDITuneRequestVal' value='246'/>
+<enum name='OSCMIDIUndefinedCommon1Val' value='244'/>
+<enum name='OSCMIDIUndefinedCommon2Val' value='245'/>
+<enum name='OSCMIDIUndefinedRealtime1Val' value='253'/>
+<enum name='OSCMessageTypeControl' value='1'/>
+<enum name='OSCMessageTypeError' value='4'/>
+<enum name='OSCMessageTypeQuery' value='2'/>
+<enum name='OSCMessageTypeReply' value='3'/>
+<enum name='OSCMessageTypeUnknown' value='0'/>
+<enum name='OSCNodeDirectory' value='1'/>
+<enum name='OSCNodeType2DPoint' value='3'/>
+<enum name='OSCNodeType3DPoint' value='4'/>
+<enum name='OSCNodeTypeColor' value='6'/>
+<enum name='OSCNodeTypeFloat' value='2'/>
+<enum name='OSCNodeTypeRect' value='5'/>
+<enum name='OSCNodeTypeString' value='7'/>
+<enum name='OSCNodeTypeUnknown' value='0'/>
+<enum name='OSCQueryTypeCurrentValue' value='4'/>
+<enum name='OSCQueryTypeDocumentation' value='2'/>
+<enum name='OSCQueryTypeNamespaceExploration' value='1'/>
+<enum name='OSCQueryTypeReturnTypeString' value='5'/>
+<enum name='OSCQueryTypeTypeSignature' value='3'/>
+<enum name='OSCQueryTypeUnknown' value='0'/>
+<enum name='OSCVal64Int' value='5'/>
+<enum name='OSCValBlob' value='13'/>
+<enum name='OSCValBool' value='10'/>
+<enum name='OSCValChar' value='7'/>
+<enum name='OSCValColor' value='8'/>
+<enum name='OSCValDouble' value='6'/>
+<enum name='OSCValFloat' value='2'/>
+<enum name='OSCValInfinity' value='12'/>
+<enum name='OSCValInt' value='1'/>
+<enum name='OSCValMIDI' value='9'/>
+<enum name='OSCValNil' value='11'/>
+<enum name='OSCValString' value='3'/>
+<enum name='OSCValTimeTag' value='4'/>
+<class name='NSObject'>
+<method selector='currentValueForNode:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='OSCValue*' type='@'/>
+</method>
+<method selector='dispatchReplyOrError:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='docStringForNode:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='namespaceArrayForNode:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='node:receivedOSCMessage:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<arg declared_type='id' name='msg' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nodeDeleted:'>
+<arg declared_type='id' name='node' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nodeNameChanged:'>
+<arg declared_type='id' name='node' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nodeRenamed:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='receivedOSCMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='returnTypeStringForNode:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='typeSignatureForNode:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='NSString'>
+<method selector='containsOSCWildCard'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='firstPathComponent'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='posixMatchAgainstFastRegex:'>
+<arg declared_type='NSString*' name='r' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='posixMatchAgainstSlowRegex:'>
+<arg declared_type='NSString*' name='r' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='predicateMatchAgainstRegex:'>
+<arg declared_type='NSString*' name='r' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='stringByDeletingFirstPathComponent'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='stringByDeletingLastAndAddingFirstSlash'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='stringBySanitizingForOSCPath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='stringFromRawIPAddress:'>
+<arg declared_type='unsigned long' name='i' index='0' type='L'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='stringWithBytes:length:encoding:'>
+<arg declared_type='void*' name='b' const='true' index='0' type='^v'/>
+<arg declared_type='NSUInteger' name='l' index='1' type='I'/>
+<arg declared_type='NSStringEncoding' name='e' index='2' type='I'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='trimFirstAndLastSlashes'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='OSCAddressSpace'>
+<method selector='_dispatchReplyOrError:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addDelegate:forPath:'>
+<arg declared_type='id' name='d' index='0' type='@'/>
+<arg declared_type='NSString*' name='p' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='dispatchMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='mainAddressSpace'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='makeMenuForNode:ofType:withTarget:action:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<arg declared_type='NSIndexSet*' name='ts' index='1' type='@'/>
+<arg declared_type='id' name='t' index='2' type='@'/>
+<arg declared_type='SEL' name='a' index='3' type=':'/>
+<retval declared_type='NSMenu*' type='@'/>
+</method>
+<method class_method='true' selector='makeMenuForNode:withTarget:action:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<arg declared_type='id' name='t' index='1' type='@'/>
+<arg declared_type='SEL' name='a' index='2' type=':'/>
+<retval declared_type='NSMenu*' type='@'/>
+</method>
+<method selector='nodeRenamed:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='refreshMenu'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeDelegate:forPath:'>
+<arg declared_type='id' name='d' index='0' type='@'/>
+<arg declared_type='NSString*' name='p' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renameAddress:to:'>
+<arg declared_type='NSString*' name='before' index='0' type='@'/>
+<arg declared_type='NSString*' name='after' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renameAddressArray:toArray:'>
+<arg declared_type='NSArray*' name='before' index='0' type='@'/>
+<arg declared_type='NSArray*' name='after' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNode:forAddress:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<arg declared_type='NSString*' name='a' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNode:forAddress:createIfMissing:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<arg declared_type='NSString*' name='a' index='1' type='@'/>
+<arg declared_type='BOOL' name='c' index='2' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNode:forAddressArray:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<arg declared_type='NSArray*' name='a' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNode:forAddressArray:createIfMissing:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<arg declared_type='NSArray*' name='a' index='1' type='@'/>
+<arg declared_type='BOOL' name='c' index='2' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCBundle'>
+<method selector='addElement:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addElementArray:'>
+<arg declared_type='NSArray*' name='a' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bufferLength'>
+<retval declared_type='long' type='l'/>
+</method>
+<method class_method='true' selector='create'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithElement:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithElementArray:'>
+<arg declared_type='id' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='parseRawBuffer:ofMaxLength:toInPort:inheritedTimeTag:fromAddr:port:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<arg declared_type='int' name='l' index='1' type='i'/>
+<arg declared_type='id' name='p' index='2' type='@'/>
+<arg declared_type='NSDate*' name='d' index='3' type='@'/>
+<arg declared_type='unsigned int' name='txAddr' index='4' type='I'/>
+<arg declared_type='unsigned short' name='txPort' index='5' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTimeTag:'>
+<arg declared_type='NSDate*' name='timeTag' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='timeTag'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='writeToBuffer:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCInPort'>
+<method selector='OSCThreadProc'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_addMessage:'>
+<arg declared_type='OSCMessage*' name='val' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_dispatchQuery:toOutPort:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<arg declared_type='OSCOutPort*' name='o' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bound'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='createSnapshot'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='createSocket'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='createWithPort:'>
+<arg declared_type='unsigned short' name='p' index='0' type='S'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithPort:labelled:'>
+<arg declared_type='unsigned short' name='p' index='0' type='S'/>
+<arg declared_type='NSString*' name='n' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='handleScratchArray:'>
+<arg declared_type='NSArray*' name='a' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithPort:'>
+<arg declared_type='unsigned short' name='p' index='0' type='S'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithPort:labelled:'>
+<arg declared_type='unsigned short' name='p' index='0' type='S'/>
+<arg declared_type='NSString*' name='n' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='ipAddressString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='parseRawBuffer:ofMaxLength:fromAddr:port:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<arg declared_type='int' name='l' index='1' type='i'/>
+<arg declared_type='unsigned int' name='txAddr' index='2' type='I'/>
+<arg declared_type='unsigned short' name='txPort' index='3' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='port'>
+<retval declared_type='unsigned short' type='S'/>
+</method>
+<method selector='portLabel'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInterval:'>
+<arg declared_type='double' name='n' index='0' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPort:'>
+<arg declared_type='unsigned short' name='n' index='0' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortLabel:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zeroConfDest'>
+<retval declared_type='NSNetService*' type='@'/>
+</method>
+</class>
+<class name='OSCManager'>
+<method selector='_generalInit'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='createNewInput'>
+<retval declared_type='OSCInPort*' type='@'/>
+</method>
+<method selector='createNewInputForPort:'>
+<arg declared_type='int' name='p' index='0' type='i'/>
+<retval declared_type='OSCInPort*' type='@'/>
+</method>
+<method selector='createNewInputForPort:withLabel:'>
+<arg declared_type='int' name='p' index='0' type='i'/>
+<arg declared_type='NSString*' name='l' index='1' type='@'/>
+<retval declared_type='OSCInPort*' type='@'/>
+</method>
+<method selector='createNewInputFromSnapshot:'>
+<arg declared_type='NSDictionary*' name='s' index='0' type='@'/>
+<retval declared_type='OSCInPort*' type='@'/>
+</method>
+<method selector='createNewOutput'>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='createNewOutputFromSnapshot:'>
+<arg declared_type='NSDictionary*' name='s' index='0' type='@'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='createNewOutputToAddress:atPort:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='int' name='p' index='1' type='i'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='createNewOutputToAddress:atPort:withLabel:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='int' name='p' index='1' type='i'/>
+<arg declared_type='NSString*' name='l' index='2' type='@'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='deleteAllInputs'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteAllOutputs'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dispatchQuery:toOutput:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<arg declared_type='OSCOutPort*' name='o' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dispatchReplyOrError:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='findInputWithLabel:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='OSCInPort*' type='@'/>
+</method>
+<method selector='findInputWithZeroConfName:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='OSCInPort*' type='@'/>
+</method>
+<method selector='findOutputForIndex:'>
+<arg declared_type='int' name='i' index='0' type='i'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='findOutputWithAddress:andPort:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='int' name='p' index='1' type='i'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='findOutputWithLabel:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='findOutputWithRawAddress:andPort:'>
+<arg declared_type='unsigned int' name='a' index='0' type='I'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<retval declared_type='OSCOutPort*' type='@'/>
+</method>
+<method selector='getUniqueInputLabel'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getUniqueOutputLabel'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='hostIPv4Addresses'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='inPortArray'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='inPortClass'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='inPortLabelBase'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithInPortClass:outPortClass:'>
+<arg declared_type='Class' name='i' index='0' type='#'/>
+<arg declared_type='Class' name='o' index='1' type='#'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='outPortArray'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='outPortClass'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='outPortLabelArray'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='receivedOSCMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllOutputs'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeInput:'>
+<arg declared_type='id' name='p' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeOutput:'>
+<arg declared_type='id' name='p' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeOutputWithLabel:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInPortLabelBase:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCMessage'>
+<method selector='_description'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='_fastInit::::::'>
+<arg declared_type='NSString*' name='addr' index='0' type='@'/>
+<arg declared_type='BOOL' name='addrHasWildcards' index='1' type='B'/>
+<arg declared_type='OSCMessageType' name='mType' index='2' type='i'/>
+<arg declared_type='OSCQueryType' name='qType' index='3' type='i'/>
+<arg declared_type='unsigned int' name='qTxAddr' index='4' type='I'/>
+<arg declared_type='unsigned short' name='qTxPort' index='5' type='S'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='_setMessageType:'>
+<arg declared_type='OSCMessageType' name='n' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_setQueryType:'>
+<arg declared_type='OSCQueryType' name='n' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_setWildcardsInAddress:'>
+<arg declared_type='BOOL' name='n' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addBOOL:'>
+<arg declared_type='BOOL' name='n' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addColor:'>
+<arg declared_type='NSColor*' name='c' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addFloat:'>
+<arg declared_type='float' name='n' index='0' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addInt:'>
+<arg declared_type='int' name='n' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addNSDataBlob:'>
+<arg declared_type='NSData*' name='b' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addValue:'>
+<arg declared_type='OSCValue*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='address'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='bufferLength'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='calculateFloatValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='calculateFloatValueAtIndex:'>
+<arg declared_type='int' name='i' index='0' type='i'/>
+<retval declared_type='float' type='f'/>
+</method>
+<method class_method='true' selector='createErrorForAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createErrorForMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createQueryType:forAddress:'>
+<arg declared_type='OSCQueryType' name='t' index='0' type='i'/>
+<arg declared_type='NSString*' name='a' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createReplyForAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createReplyForMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initErrorForAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initErrorForMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initQueryType:forAddress:'>
+<arg declared_type='OSCQueryType' name='t' index='0' type='i'/>
+<arg declared_type='NSString*' name='a' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initReplyForAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initReplyForMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='messageType'>
+<retval declared_type='OSCMessageType' type='i'/>
+</method>
+<method class_method='true' selector='parseRawBuffer:ofMaxLength:fromAddr:port:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<arg declared_type='int' name='l' index='1' type='i'/>
+<arg declared_type='unsigned int' name='txAddr' index='2' type='I'/>
+<arg declared_type='unsigned short' name='txPort' index='3' type='S'/>
+<retval declared_type='OSCMessage*' type='@'/>
+</method>
+<method selector='queryTXAddress'>
+<retval declared_type='unsigned int' type='I'/>
+</method>
+<method selector='queryTXPort'>
+<retval declared_type='unsigned short' type='S'/>
+</method>
+<method selector='queryType'>
+<retval declared_type='OSCQueryType' type='i'/>
+</method>
+<method selector='replyAddress'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setTimeTag:'>
+<arg declared_type='NSDate*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='timeTag'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='OSCValue*' type='@'/>
+</method>
+<method selector='valueArray'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='valueAtIndex:'>
+<arg declared_type='int' name='i' index='0' type='i'/>
+<retval declared_type='OSCValue*' type='@'/>
+</method>
+<method selector='valueCount'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='wildcardsInAddress'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='writeToBuffer:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='writeToNSData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+</class>
+<class name='OSCNode'>
+<method selector='_addLocalNodesMatchingRegex:toMutArray:'>
+<arg declared_type='NSString*' name='regex' index='0' type='@'/>
+<arg declared_type='NSMutableArray*' name='a' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_logDescriptionToString:tabDepth:'>
+<arg declared_type='NSMutableString*' name='s' index='0' type='@'/>
+<arg declared_type='int' name='d' index='1' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_setNodeName:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addDelegate:'>
+<arg declared_type='id' name='d' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addDelegatesFromNode:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addLocalNode:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addressSpace'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='autoQueryReply'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='createWithName:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegateArray'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='deleteLocalNode:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dispatchMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='findLocalNodeNamed:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='findLocalNodeNamed:createIfMissing:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<arg declared_type='BOOL' name='c' index='1' type='B'/>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='findLocalNodesMatchingPOSIXRegex:'>
+<arg declared_type='NSString*' name='regex' index='0' type='@'/>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='findNodeForAddress:'>
+<arg declared_type='NSString*' name='p' index='0' type='@'/>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='findNodeForAddress:createIfMissing:'>
+<arg declared_type='NSString*' name='p' index='0' type='@'/>
+<arg declared_type='BOOL' name='c' index='1' type='B'/>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='findNodeForAddressArray:'>
+<arg declared_type='NSArray*' name='a' index='0' type='@'/>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='findNodeForAddressArray:createIfMissing:'>
+<arg declared_type='NSArray*' name='a' index='0' type='@'/>
+<arg declared_type='BOOL' name='c' index='1' type='B'/>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='findNodesMatchingAddress:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='findNodesMatchingAddressArray:'>
+<arg declared_type='NSArray*' name='a' index='0' type='@'/>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='fullName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='hiddenInMenu'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='informDelegatesOfNameChange'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithName:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lastReceivedMessage'>
+<retval declared_type='OSCMessage*' type='@'/>
+</method>
+<method selector='lastReceivedValue'>
+<retval declared_type='OSCValue*' type='@'/>
+</method>
+<method selector='nodeContents'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='nodeName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nodeNameCompare:'>
+<arg declared_type='OSCNode*' name='comp' index='0' type='@'/>
+<retval declared_type='NSComparisonResult' type='i'/>
+</method>
+<method selector='nodeType'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='parentNode'>
+<retval declared_type='OSCNode*' type='@'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queryDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='removeDelegate:'>
+<arg declared_type='id' name='d' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeFromAddressSpace'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeLocalNode:'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAddressSpace:'>
+<arg declared_type='id' name='addressSpace' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutoQueryReply:'>
+<arg declared_type='BOOL' name='autoQueryReply' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHiddenInMenu:'>
+<arg declared_type='BOOL' name='hiddenInMenu' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNodeName:'>
+<arg declared_type='NSString*' name='nodeName' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNodeType:'>
+<arg declared_type='int' name='nodeType' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setParentNode:'>
+<arg declared_type='OSCNode*' name='parentNode' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQueryDelegate:'>
+<arg declared_type='id' name='queryDelegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCOutPort'>
+<method selector='_matchesRawAddress:andPort:'>
+<arg declared_type='unsigned int' name='a' index='0' type='I'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='addr'>
+<retval declared_type='struct sockaddr_in*' type='^{sockaddr_in=CCS{in_addr=I}[8c]}'/>
+</method>
+<method selector='addressString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='createSnapshot'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='createSocket'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='createWithAddress:andPort:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithAddress:andPort:labelled:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<arg declared_type='NSString*' name='l' index='2' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAddress:andPort:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAddress:andPort:labelled:'>
+<arg declared_type='NSString*' name='a' index='0' type='@'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<arg declared_type='NSString*' name='l' index='2' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='port'>
+<retval declared_type='unsigned short' type='S'/>
+</method>
+<method selector='portLabel'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendThisBundle:'>
+<arg declared_type='OSCBundle*' name='b' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendThisMessage:'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendThisPacket:'>
+<arg declared_type='OSCPacket*' name='p' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAddressString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAddressString:andPort:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<arg declared_type='unsigned short' name='p' index='1' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPort:'>
+<arg declared_type='unsigned short' name='p' index='0' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortLabel:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCPOSIXRegExpHolder'>
+<method class_method='true' selector='createWithString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='evalAgainstString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='regexString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='OSCPacket'>
+<method selector='bufferLength'>
+<retval declared_type='long' type='l'/>
+</method>
+<method class_method='true' selector='createWithContent:'>
+<arg declared_type='id' name='c' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithContent:'>
+<arg declared_type='id' name='c' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='parseRawBuffer:ofMaxLength:toInPort:fromAddr:port:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<arg declared_type='int' name='l' index='1' type='i'/>
+<arg declared_type='id' name='p' index='2' type='@'/>
+<arg declared_type='unsigned int' name='txAddr' index='3' type='I'/>
+<arg declared_type='unsigned short' name='txPort' index='4' type='S'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='payload'>
+<retval declared_type='unsigned char*' type='*'/>
+</method>
+</class>
+<class name='OSCValue'>
+<method selector='blobNSData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='boolValue'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bufferLength'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='calculateFloatValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='charValue'>
+<retval declared_type='char' type='c'/>
+</method>
+<method selector='colorValue'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithBool:'>
+<arg declared_type='BOOL' name='n' index='0' type='B'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithChar:'>
+<arg declared_type='char' name='n' index='0' type='c'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithColor:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithDouble:'>
+<arg declared_type='double' name='n' index='0' type='d'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithFloat:'>
+<arg declared_type='float' name='n' index='0' type='f'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithInfinity'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithInt:'>
+<arg declared_type='int' name='n' index='0' type='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithLongLong:'>
+<arg declared_type='long long' name='n' index='0' type='q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithMIDIChannel:status:data1:data2:'>
+<arg declared_type='Byte' name='c' index='0' type='C'/>
+<arg declared_type='Byte' name='s' index='1' type='C'/>
+<arg declared_type='Byte' name='d1' index='2' type='C'/>
+<arg declared_type='Byte' name='d2' index='3' type='C'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithNSDataBlob:'>
+<arg declared_type='NSData*' name='d' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithNil'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='createWithTimeSeconds:microSeconds:'>
+<arg declared_type='long' name='s' index='0' type='l'/>
+<arg declared_type='long' name='ms' index='1' type='l'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='dateValue'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='doubleValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='floatValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='initWithBool:'>
+<arg declared_type='BOOL' name='n' index='0' type='B'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithChar:'>
+<arg declared_type='char' name='n' index='0' type='c'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithColor:'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithDouble:'>
+<arg declared_type='double' name='n' index='0' type='d'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFloat:'>
+<arg declared_type='float' name='n' index='0' type='f'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithInfinity'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithInt:'>
+<arg declared_type='int' name='n' index='0' type='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithLongLong:'>
+<arg declared_type='long long' name='n' index='0' type='q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithMIDIChannel:status:data1:data2:'>
+<arg declared_type='Byte' name='c' index='0' type='C'/>
+<arg declared_type='Byte' name='s' index='1' type='C'/>
+<arg declared_type='Byte' name='d1' index='2' type='C'/>
+<arg declared_type='Byte' name='d2' index='3' type='C'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithNSDataBlob:'>
+<arg declared_type='NSData*' name='d' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithNil'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithString:'>
+<arg declared_type='NSString*' name='n' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithTimeSeconds:microSeconds:'>
+<arg declared_type='long' name='s' index='0' type='l'/>
+<arg declared_type='long' name='ms' index='1' type='l'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='intValue'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='lengthyDescription'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='longLongValue'>
+<retval declared_type='long long' type='q'/>
+</method>
+<method selector='midiData1'>
+<retval declared_type='Byte' type='C'/>
+</method>
+<method selector='midiData2'>
+<retval declared_type='Byte' type='C'/>
+</method>
+<method selector='midiPort'>
+<retval declared_type='Byte' type='C'/>
+</method>
+<method selector='midiStatus'>
+<retval declared_type='OSCMIDIType' type='i'/>
+</method>
+<method selector='stringValue'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='timeValue'>
+<retval declared_type='struct timeval' type='{timeval=ii}'/>
+</method>
+<method selector='type'>
+<retval declared_type='OSCValueType' type='i'/>
+</method>
+<method selector='writeToBuffer:typeOffset:dataOffset:'>
+<arg declared_type='unsigned char*' name='b' index='0' type='*'/>
+<arg declared_type='int*' name='t' index='1' type='^i'/>
+<arg declared_type='int*' name='d' index='2' type='^i'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCZeroConfDomain'>
+<method class_method='true' selector='createWithDomain:andDomainManager:'>
+<arg declared_type='NSString*' name='d' index='0' type='@'/>
+<arg declared_type='id' name='m' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithDomain:andDomainManager:'>
+<arg declared_type='NSString*' name='d' index='0' type='@'/>
+<arg declared_type='id' name='m' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='netService:didNotResolve:'>
+<arg declared_type='NSNetService*' name='n' index='0' type='@'/>
+<arg declared_type='NSDictionary*' name='err' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='netServiceBrowser:didFindService:moreComing:'>
+<arg declared_type='NSNetServiceBrowser*' name='n' index='0' type='@'/>
+<arg declared_type='NSNetService*' name='x' index='1' type='@'/>
+<arg declared_type='BOOL' name='m' index='2' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='netServiceBrowser:didNotSearch:'>
+<arg declared_type='NSNetServiceBrowser*' name='n' index='0' type='@'/>
+<arg declared_type='NSDictionary*' name='err' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='netServiceBrowser:didRemoveService:moreComing:'>
+<arg declared_type='NSNetServiceBrowser*' name='n' index='0' type='@'/>
+<arg declared_type='NSNetService*' name='s' index='1' type='@'/>
+<arg declared_type='BOOL' name='m' index='2' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='netServiceDidResolveAddress:'>
+<arg declared_type='NSNetService*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSCZeroConfManager'>
+<method selector='initWithOSCManager:'>
+<arg declared_type='id' name='m' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='netServiceBrowser:didFindDomain:moreComing:'>
+<arg declared_type='NSNetServiceBrowser*' name='n' index='0' type='@'/>
+<arg declared_type='NSString*' name='d' index='1' type='@'/>
+<arg declared_type='BOOL' name='m' index='2' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='netServiceBrowser:didNotSearch:'>
+<arg declared_type='NSNetServiceBrowser*' name='n' index='0' type='@'/>
+<arg declared_type='NSDictionary*' name='err' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='serviceRemoved:'>
+<arg declared_type='NSNetService*' name='s' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='serviceResolved:'>
+<arg declared_type='NSNetService*' name='s' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='OSCAddressSpaceDelegateProtocol'>
+<method selector='dispatchReplyOrError:' type='v12@0:4@8'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nodeRenamed:' type='v12@0:4@8'>
+<arg declared_type='OSCNode*' name='n' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='OSCDelegateProtocol'>
+<method selector='receivedOSCMessage:' type='v12@0:4@8'>
+<arg declared_type='OSCMessage*' name='m' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='OSCNodeDelegateProtocol'>
+<method selector='node:receivedOSCMessage:' type='v16@0:4@8@12'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<arg declared_type='id' name='msg' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nodeDeleted:' type='v12@0:4@8'>
+<arg declared_type='id' name='node' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nodeNameChanged:' type='v12@0:4@8'>
+<arg declared_type='id' name='node' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='OSCNodeQueryDelegateProtocol'>
+<method selector='currentValueForNode:' type='@12@0:4@8'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='OSCValue*' type='@'/>
+</method>
+<method selector='docStringForNode:' type='@12@0:4@8'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='namespaceArrayForNode:' type='@12@0:4@8'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='returnTypeStringForNode:' type='@12@0:4@8'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='typeSignatureForNode:' type='@12@0:4@8'>
+<arg declared_type='id' name='n' index='0' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</informal_protocol>
+</signatures>

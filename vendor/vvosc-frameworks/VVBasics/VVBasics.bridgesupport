@@ -1,0 +1,1156 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='IPHONE' value='1'/>
+<enum name='MAXTIME' value='1.0'/>
+<enum name='VVFenceModeDBSkip' value='1'/>
+<enum name='VVFenceModeEveryRefresh' value='0'/>
+<enum name='VVFenceModeFinish' value='3'/>
+<enum name='VVFenceModeSBSkip' value='2'/>
+<enum name='VVFlushModeApple' value='3'/>
+<enum name='VVFlushModeCGL' value='1'/>
+<enum name='VVFlushModeFinish' value='4'/>
+<enum name='VVFlushModeGL' value='0'/>
+<enum name='VVFlushModeNS' value='2'/>
+<enum name='VVSpriteEventDouble' value='4'/>
+<enum name='VVSpriteEventDown' value='1'/>
+<enum name='VVSpriteEventDrag' value='2'/>
+<enum name='VVSpriteEventNULL' value='0'/>
+<enum name='VVSpriteEventRightDown' value='5'/>
+<enum name='VVSpriteEventRightUp' value='6'/>
+<enum name='VVSpriteEventUp' value='3'/>
+<function name='populateTimevalWithFloat'>
+<arg declared_type='struct timeval*' type='^{timeval=ii}' name='tval'/>
+<arg declared_type='double' type='d' name='secVal'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='vvcurlWriteFunction'>
+<arg declared_type='void*' type='^v' name='ptr'/>
+<arg declared_type='size_t' type='L' name='size'/>
+<arg declared_type='size_t' type='L' name='nmemb'/>
+<arg declared_type='void*' type='^v' name='stream'/>
+<retval declared_type='size_t' type='L'/>
+</function>
+<class name='MutLockArray'>
+<method selector='addObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addObjectsFromArray:'>
+<arg declared_type='id' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='array'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method class_method='true' selector='arrayWithCapacity:'>
+<arg declared_type='NSUInteger' type='I' name='c' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='containsIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='containsObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='count'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='createArrayCopy'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='filteredArrayUsingPredicate:'>
+<arg declared_type='NSPredicate*' type='@' name='predicate' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='firstObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='indexOfIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='indexOfObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCapacity:'>
+<arg declared_type='NSUInteger' type='I' name='c' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='insertObject:atIndex:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<arg declared_type='NSUInteger' type='I' name='i' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lastObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockAddObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockAddObjectsFromArray:'>
+<arg declared_type='id' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockContainsIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lockContainsObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lockCount'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='lockCreateArrayCopy'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='lockFilteredArrayUsingPredicate:'>
+<arg declared_type='NSPredicate*' type='@' name='predicate' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='lockFirstObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockIndexOfIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='lockIndexOfObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='lockInsertObject:atIndex:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<arg declared_type='NSUInteger' type='I' name='i' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockLastObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockMakeObjectsPerformSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockMakeObjectsPerformSelector:withObject:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<arg declared_type='id' type='@' name='o' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockObjectAtIndex:'>
+<arg declared_type='NSUInteger' type='I' name='i' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockObjectsAtIndexes:'>
+<arg declared_type='NSIndexSet*' type='@' name='indexes' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='lockRemoveAllObjects'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveFirstObject'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveIdenticalPtrsInArray:'>
+<arg declared_type='NSArray*' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveLastObject'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveObjectAtIndex:'>
+<arg declared_type='NSUInteger' type='I' name='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveObjectsAtIndexes:'>
+<arg declared_type='NSIndexSet*' type='@' name='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveObjectsInArray:'>
+<arg declared_type='NSArray*' type='@' name='otherArray' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockReplaceObjectsAtIndexes:withObjects:'>
+<arg declared_type='NSIndexSet*' type='@' name='indexes' index='0'/>
+<arg declared_type='NSArray*' type='@' name='objects' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockReplaceWithObjectsFromArray:'>
+<arg declared_type='id' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockSortUsingDescriptors:'>
+<arg declared_type='NSArray*' type='@' name='descriptors' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockSortUsingSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockValueForKey:'>
+<arg declared_type='NSString*' type='@' name='key' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='makeObjectsPerformSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='makeObjectsPerformSelector:withObject:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<arg declared_type='id' type='@' name='o' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='objectAtIndex:'>
+<arg declared_type='NSUInteger' type='I' name='i' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectEnumerator'>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='objectsAtIndexes:'>
+<arg declared_type='NSIndexSet*' type='@' name='indexes' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='rdlock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllObjects'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeFirstObject'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeIdenticalPtrsInArray:'>
+<arg declared_type='NSArray*' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeLastObject'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObjectAtIndex:'>
+<arg declared_type='NSUInteger' type='I' name='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObjectsAtIndexes:'>
+<arg declared_type='NSIndexSet*' type='@' name='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObjectsInArray:'>
+<arg declared_type='NSArray*' type='@' name='otherArray' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replaceObjectsAtIndexes:withObjects:'>
+<arg declared_type='NSIndexSet*' type='@' name='indexes' index='0'/>
+<arg declared_type='NSArray*' type='@' name='objects' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replaceWithObjectsFromArray:'>
+<arg declared_type='id' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reverseObjectEnumerator'>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='sortUsingDescriptors:'>
+<arg declared_type='NSArray*' type='@' name='descriptors' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sortUsingSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='valueForKey:'>
+<arg declared_type='NSString*' type='@' name='key' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='wrlock'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='MutLockDict'>
+<method selector='addEntriesFromDictionary:'>
+<arg declared_type='NSDictionary*' type='@' name='otherDictionary' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='allKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='allValues'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='count'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='createDictCopy'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='dict'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='dictionaryWithCapacity:'>
+<arg declared_type='NSUInteger' type='I' name='c' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCapacity:'>
+<arg declared_type='NSUInteger' type='I' name='c' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockAddEntriesFromDictionary:'>
+<arg declared_type='NSDictionary*' type='@' name='otherDictionary' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockAllKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='lockAllValues'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='lockCount'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='lockCreateDictCopy'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='lockMakeObjectsPerformSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockObjectForKey:'>
+<arg declared_type='NSString*' type='@' name='k' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockRemoveAllObjects'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockRemoveObjectForKey:'>
+<arg declared_type='NSString*' type='@' name='k' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockSetObject:forKey:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<arg declared_type='NSString*' type='@' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockSetValue:forKey:'>
+<arg declared_type='id' type='@' name='v' index='0'/>
+<arg declared_type='NSString*' type='@' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='makeObjectsPerformSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='objectForKey:'>
+<arg declared_type='NSString*' type='@' name='k' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='rdlock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllObjects'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObjectForKey:'>
+<arg declared_type='NSString*' type='@' name='k' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<arg declared_type='NSString*' type='@' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:forKey:'>
+<arg declared_type='id' type='@' name='v' index='0'/>
+<arg declared_type='NSString*' type='@' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='wrlock'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='MutNRLockArray'>
+<method selector='addObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addObjectsFromArray:'>
+<arg declared_type='id' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='arrayWithCapacity:'>
+<arg declared_type='NSUInteger' type='I' name='c' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='bruteForceMakeObjectsPerformSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bruteForceMakeObjectsPerformSelector:withObject:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<arg declared_type='id' type='@' name='o' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='containsIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='containsObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='createArrayCopy'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='createArrayCopyFromObjects'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='indexOfIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='indexOfObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='insertObject:atIndex:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<arg declared_type='NSUInteger' type='I' name='i' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lastObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockBruteForceMakeObjectsPerformSelector:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockBruteForceMakeObjectsPerformSelector:withObject:'>
+<arg declared_type='SEL' type=':' name='s' index='0'/>
+<arg declared_type='id' type='@' name='o' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockCreateArrayCopyFromObjects'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='objectAtIndex:'>
+<arg declared_type='NSUInteger' type='I' name='i' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectsAtIndexes:'>
+<arg declared_type='NSIndexSet*' type='@' name='indexes' index='0'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='removeIdenticalPtr:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replaceWithObjectsFromArray:'>
+<arg declared_type='id' type='@' name='a' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='MutNRLockDict'>
+<method selector='addEntriesFromDictionary:'>
+<arg declared_type='id' type='@' name='otherDictionary' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='allValues'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='objectForKey:'>
+<arg declared_type='NSString*' type='@' name='k' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<arg declared_type='NSString*' type='@' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:forKey:'>
+<arg declared_type='id' type='@' name='v' index='0'/>
+<arg declared_type='NSString*' type='@' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='crashReporterCheckDone'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='crashReporterCheckDone:'>
+<arg declared_type='BOOL' type='B' name='foundLogs' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dlFinished:'>
+<arg declared_type='id' type='@' name='h' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NamedMutLockArray'>
+<method class_method='true' selector='arrayWithCapacity:'>
+<arg declared_type='int' type='i' name='c' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='create'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nameCompare:'>
+<arg declared_type='NamedMutLockArray*' type='@' name='comp' index='0'/>
+<retval declared_type='NSComparisonResult' type='i'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' type='@' name='name' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ObjectHolder'>
+<method class_method='true' selector='createWithObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithObject:'>
+<arg declared_type='id' type='@' name='o' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='object'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setObject:'>
+<arg declared_type='id' type='@' name='object' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VVCURLDL'>
+<method selector='_performAsyncWithDelegate:'>
+<arg declared_type='id' type='@' name='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_performWithDelegate:'>
+<arg declared_type='id' type='@' name='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='appendDataToPOST:'>
+<arg declared_type='NSData*' type='@' name='d' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='appendStringToPOST:'>
+<arg declared_type='NSString*' type='@' name='s' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='createWithAddress:'>
+<arg declared_type='NSString*' type='@' name='a' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='err'>
+<retval declared_type='CURLcode' type='i'/>
+</method>
+<method selector='firstFormPtr'>
+<retval declared_type='struct curl_httppost*' type='^{curl_httppost=^{curl_httppost}*l*l*l*^{curl_slist}^{curl_httppost}l*^v}'/>
+</method>
+<method selector='headerList'>
+<retval declared_type='struct curl_slist*' type='^{curl_slist=*^{curl_slist}}'/>
+</method>
+<method selector='initWithAddress:'>
+<arg declared_type='NSString*' type='@' name='a' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lastFormPtr'>
+<retval declared_type='struct curl_httppost*' type='^{curl_httppost=^{curl_httppost}*l*l*l*^{curl_slist}^{curl_httppost}l*^v}'/>
+</method>
+<method selector='perform'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='performAsync:withDelegate:'>
+<arg declared_type='BOOL' type='B' name='as' index='0'/>
+<arg declared_type='id' type='@' name='d' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='responseData'>
+<retval declared_type='NSMutableData*' type='@'/>
+</method>
+<method selector='responseString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='returnOnMain'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setFirstFormPtr:'>
+<arg declared_type='struct curl_httppost*' type='^{curl_httppost=^{curl_httppost}*l*l*l*^{curl_slist}^{curl_httppost}l*^v}' name='firstFormPtr' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeaderList:'>
+<arg declared_type='struct curl_slist*' type='^{curl_slist=*^{curl_slist}}' name='headerList' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLastFormPtr:'>
+<arg declared_type='struct curl_httppost*' type='^{curl_httppost=^{curl_httppost}*l*l*l*^{curl_slist}^{curl_httppost}l*^v}' name='lastFormPtr' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReturnOnMain:'>
+<arg declared_type='BOOL' type='B' name='returnOnMain' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='writePtr:size:'>
+<arg declared_type='void*' type='^v' name='ptr' index='0'/>
+<arg declared_type='size_t' type='L' name='s' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VVCrashReporter'>
+<method selector='_assembleCrashLogs'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='_consoleLogString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='_nibName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='_stringForSystemProfilerDataType:'>
+<arg declared_type='NSString*' type='@' name='t' index='0'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='_systemProfilerDict'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='check'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='closeCrashReporter'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='developerEmail'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='dlFinished:'>
+<arg declared_type='id' type='@' name='h' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='doneClicked:'>
+<arg declared_type='id' type='@' name='sender' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='openCrashReporter'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replyButton'>
+<retval declared_type='NSButton*' type='@'/>
+</method>
+<method selector='replyButtonClicked:'>
+<arg declared_type='id' type='@' name='sender' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendACrashLog'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' type='@' name='delegate' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDeveloperEmail:'>
+<arg declared_type='NSString*' type='@' name='n' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUploadURL:'>
+<arg declared_type='NSString*' type='@' name='n' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateCrashLogTimeout:'>
+<arg declared_type='NSTimer*' type='@' name='t' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='uploadURL'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='VVSprite'>
+<method selector='NRUserInfo'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='actionCallback'>
+<retval declared_type='SEL' type=':'/>
+</method>
+<method selector='bringToFront'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='checkPoint:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='createWithRect:inManager:'>
+<arg declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' name='r' index='0'/>
+<arg declared_type='id' type='@' name='m' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='draw'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='drawCallback'>
+<retval declared_type='SEL' type=':'/>
+</method>
+<method selector='hidden'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithRect:inManager:'>
+<arg declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' name='r' index='0'/>
+<arg declared_type='id' type='@' name='m' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lastActionCoords'>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+</method>
+<method selector='lastActionDelta'>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+</method>
+<method selector='lastActionInBounds'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastActionType'>
+<retval declared_type='VVSpriteEventType' type='i'/>
+</method>
+<method selector='locked'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='manager'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='mouseDown:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='mouseDownCoords'>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+</method>
+<method selector='mouseDownDelta'>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}'/>
+</method>
+<method selector='mouseDragged:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='mouseUp:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='rect'>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}'/>
+</method>
+<method selector='rightMouseDown:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='rightMouseUp:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='safeString'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='sendToBack'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setActionCallback:'>
+<arg declared_type='SEL' type=':' name='actionCallback' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' type='@' name='delegate' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDrawCallback:'>
+<arg declared_type='SEL' type=':' name='drawCallback' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHidden:'>
+<arg declared_type='BOOL' type='B' name='hidden' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocked:'>
+<arg declared_type='BOOL' type='B' name='locked' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNRUserInfo:'>
+<arg declared_type='id' type='@' name='NRUserInfo' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRect:'>
+<arg declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' name='rect' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSafeString:'>
+<arg declared_type='id' type='@' name='safeString' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserInfo:'>
+<arg declared_type='id' type='@' name='userInfo' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spriteIndex'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='trackingFlag'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='VVSpriteControl'>
+<method selector='clearColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='deleted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='finishedDrawing'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='generalInit'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lastMouseEvent'>
+<retval declared_type='NSEvent*' type='@'/>
+</method>
+<method selector='mouseIsDown'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setClearColor:'>
+<arg declared_type='NSColor*' type='@' name='clearColor' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpritesNeedUpdate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpritesNeedUpdate:'>
+<arg declared_type='BOOL' type='B' name='spritesNeedUpdate' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spriteManager'>
+<retval declared_type='VVSpriteManager*' type='@'/>
+</method>
+<method selector='spritesNeedUpdate'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='updateSprites'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VVSpriteGLView'>
+<method selector='_lock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='_unlock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='deleted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='finishedDrawing'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='flushMode'>
+<retval declared_type='VVFlushMode' type='i'/>
+</method>
+<method selector='generalInit'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initializeGL'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initialized'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastMouseEvent'>
+<retval declared_type='NSEvent*' type='@'/>
+</method>
+<method selector='mouseIsDown'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setClearColor:'>
+<arg declared_type='NSColor*' type='@' name='clearColor' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFlushMode:'>
+<arg declared_type='VVFlushMode' type='i' name='flushMode' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInitialized:'>
+<arg declared_type='BOOL' type='B' name='initialized' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpritesNeedUpdate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpritesNeedUpdate:'>
+<arg declared_type='BOOL' type='B' name='spritesNeedUpdate' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spriteManager'>
+<retval declared_type='VVSpriteManager*' type='@'/>
+</method>
+<method selector='spritesNeedUpdate'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='updateSprites'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VVSpriteManager'>
+<method selector='draw'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='drawRect:'>
+<arg declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' name='r' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getUniqueSpriteIndex'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='localMouseDown:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localMouseDragged:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localMouseUp:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localRightMouseDown:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localRightMouseUp:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='newSpriteAtBottomForRect:'>
+<arg declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' name='r' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='newSpriteAtTopForRect:'>
+<arg declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' name='r' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllSprites'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeSprite:'>
+<arg declared_type='id' type='@' name='z' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeSpriteForIndex:'>
+<arg declared_type='long' type='l' name='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeSpritesFromArray:'>
+<arg declared_type='NSArray*' type='@' name='array' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpriteInUse:'>
+<arg declared_type='VVSprite*' type='@' name='z' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spriteArray'>
+<retval declared_type='MutLockArray*' type='@'/>
+</method>
+<method selector='spriteAtPoint:'>
+<arg declared_type='NSPoint' type='{_NSPoint=ff}' name='p' index='0'/>
+<retval declared_type='VVSprite*' type='@'/>
+</method>
+<method selector='spriteForIndex:'>
+<arg declared_type='long' type='l' name='i' index='0'/>
+<retval declared_type='VVSprite*' type='@'/>
+</method>
+<method selector='spriteInUse'>
+<retval declared_type='VVSprite*' type='@'/>
+</method>
+</class>
+<class name='VVSpriteView'>
+<method selector='clearColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='deleted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='finishedDrawing'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='generalInit'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lastMouseEvent'>
+<retval declared_type='NSEvent*' type='@'/>
+</method>
+<method selector='mouseIsDown'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='prepareToBeDeleted'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setClearColor:'>
+<arg declared_type='NSColor*' type='@' name='clearColor' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpritesNeedUpdate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpritesNeedUpdate:'>
+<arg declared_type='BOOL' type='B' name='spritesNeedUpdate' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spriteManager'>
+<retval declared_type='VVSpriteManager*' type='@'/>
+</method>
+<method selector='spritesNeedUpdate'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='updateSprites'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VVStopwatch'>
+<method selector='copyStartTimeToTimevalStruct:'>
+<arg declared_type='struct timeval*' type='^{timeval=ii}' name='dst' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='create'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setStartTimeStruct:'>
+<arg declared_type='struct timeval*' type='^{timeval=ii}' name='src' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startInTimeInterval:'>
+<arg declared_type='NSTimeInterval' type='d' name='t' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='timeSinceStart'>
+<retval declared_type='double' type='d'/>
+</method>
+</class>
+<class name='VVThreadLoop'>
+<method selector='generalInit'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithTimeInterval:'>
+<arg declared_type='double' type='d' name='i' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithTimeInterval:target:selector:'>
+<arg declared_type='double' type='d' name='i' index='0'/>
+<arg declared_type='id' type='@' name='t' index='1'/>
+<arg declared_type='SEL' type=':' name='s' index='2'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='interval'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='pause'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resume'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='running'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setInterval:'>
+<arg declared_type='double' type='d' name='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopAndWaitUntilDone'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='threadCallback'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='threadProc'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='OldVVCrashReporterDelegate'>
+<method type='v8@0:4' selector='crashReporterCheckDone'>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='VVCURLDLDelegate'>
+<method type='v12@0:4@8' selector='dlFinished:'>
+<arg declared_type='id' type='@' name='h' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='VVCrashReporterDelegate'>
+<method type='v12@0:4B8' selector='crashReporterCheckDone:'>
+<arg declared_type='BOOL' type='B' name='foundLogs' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
