@@ -18,12 +18,12 @@ class MapViewController < UIViewController
   end
   
   def map_image_view
-      @map_image_view ||= begin
-        image_view = UIImageView.alloc.init
-        image_view.image = UIImage.imageNamed("map.jpg")
-        image_view.frame = CGRectMake(0, 0, image_view.image.size.width, image_view.image.size.height)
-        image_view.userInteractionEnabled = true
-        image_view
-      end
+    @map_image_view ||= begin
+      image_view = UIImageView.alloc.init
+      image_view.image = UIImage.imageNamed("map.jpg")
+      image_view.frame = CGRectMake(0, 0, image_view.image.size.width, image_view.image.size.height)
+      image_view.userInteractionEnabled = true
+      image_view
     end
+  end
 end
