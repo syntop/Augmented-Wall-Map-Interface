@@ -2,18 +2,18 @@ class MapViewController < UIViewController
   def loadView
     initOSC()
     
-    scroll_view = UIScrollView.alloc.initWithFrame(UIScreen.mainScreen.applicationFrame)
+    scroll_view = TiledScrollView.alloc.initWithFrame(UIScreen.mainScreen.applicationFrame)
     scroll_view.delegate = self
     scroll_view.clipsToBounds = true
     scroll_view.scrollEnabled = true
     scroll_view.pagingEnabled = false
     scroll_view.maximumZoomScale = 2.0
-    scroll_view.minimumZoomScale = 0.2
+    scroll_view.minimumZoomScale = 0.5
     scroll_view.bounces = true
     scroll_view.userInteractionEnabled = true
     scroll_view.setContentSize([map_image_view.frame.size.width, map_image_view.frame.size.height])
     scroll_view.backgroundColor = UIColor.whiteColor
-    scroll_view.setZoomScale(scroll_view.maximumZoomScale)
+    scroll_view.setZoomScale(1.0)
     scroll_view.addSubview(map_image_view)
     
     self.view = scroll_view
@@ -46,5 +46,9 @@ class MapViewController < UIViewController
   
   def viewForZoomingInScrollView(scrollView)
     return map_image_view
+  end
+  
+  def shouldAutorotateToInterfaceOrientation(orientation)
+    return true
   end
 end
